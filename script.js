@@ -5,13 +5,13 @@
    4) Deploy this folder to GitHub Pages.
 */
 const firebaseConfig = {
-  apiKey: "GANTI_DENGAN_API_KEY",
-  authDomain: "GANTI_DENGAN_PROJECT_ID.firebaseapp.com",
-  databaseURL: "GANTI_DENGAN_DATABASE_URL",
-  projectId: "GANTI_DENGAN_PROJECT_ID",
-  storageBucket: "GANTI_DENGAN_STORAGE_BUCKET",
-  messagingSenderId: "GANTI_DENGAN_MESSAGING_SENDER_ID",
-  appId: "GANTI_DENGAN_APP_ID"
+  apiKey: "AIzaSyCfzAaIdXgYv4Wl9Z5F-oVEk0pdRdqHgPk",
+  authDomain: "monster-math-arena.firebaseapp.com",
+  databaseURL: "https://monster-math-arena.web.app//",
+  projectId: "monster-math-arena",
+  storageBucket: "monster-math-arena.firebasestorage.app",
+  messagingSenderId: "375468706758",
+  appId: "1:375468706758:web:1fee313817b58dcf8e00c7"
 };
 
 const MAX_PLAYERS = 30;
@@ -412,3 +412,4 @@ function randomRoomCode(){
 $("roomInput").addEventListener("keydown", e => {
   if(e.key === "Enter") joinRoom();
 });
+
