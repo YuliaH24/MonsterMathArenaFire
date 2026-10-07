@@ -1,0 +1,44 @@
+:root{
+  --bg:#0b1020;--panel:#151d34;--panel2:#1c2744;--text:#f6f7fb;--muted:#aeb8d1;
+  --accent:#ffd166;--accent2:#7bdff2;--danger:#ff6b6b;--ok:#7ee787;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:
+radial-gradient(circle at 20% 10%,#283b68 0,transparent 28%),radial-gradient(circle at 80% 30%,#402650 0,transparent 30%),var(--bg);color:var(--text)}
+button,input{font:inherit}
+.app{width:min(960px,100%);margin:auto;padding:24px}
+.screen{display:none;min-height:calc(100vh - 48px);align-items:center;justify-content:center}
+.screen.active{display:flex;flex-direction:column}
+.hero{width:min(720px,100%);text-align:center}
+h1{font-size:clamp(38px,8vw,72px);margin:12px 0 8px;line-height:1}
+h2{margin-top:0}.subtitle{color:var(--muted);font-size:18px}
+.badge{display:inline-block;padding:8px 14px;border:1px solid #ffffff24;border-radius:999px;background:#ffffff0b;font-size:12px;letter-spacing:.12em}
+.card{background:linear-gradient(145deg,#18223d,#11182d);border:1px solid #ffffff12;border-radius:24px;padding:24px;box-shadow:0 18px 60px #0005;text-align:left}
+.hero>.card{margin-top:28px}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:8px}
+input{width:100%;padding:14px 16px;border-radius:14px;border:1px solid #ffffff20;background:#0c1326;color:var(--text);outline:none}
+input:focus{border-color:var(--accent2)}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+button{border:0;border-radius:14px;padding:13px 16px;font-weight:800;cursor:pointer;transition:.15s transform,.15s opacity}
+button:hover{transform:translateY(-1px)}button:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.primary{background:var(--accent);color:#211a08}.secondary{background:var(--accent2);color:#081820}.danger{background:#ff6b6b22;color:#ff9b9b;border:1px solid #ff6b6b44}
+.wide{width:100%;margin-top:18px}.join-box{margin-top:14px}.hidden{display:none!important}.error{color:#ff9b9b;margin-top:14px;min-height:20px}
+.topbar{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+.small-label{font-size:11px;color:var(--muted);letter-spacing:.15em}.room-code{font-size:28px;font-weight:900;letter-spacing:.18em;color:var(--accent)}
+.lobby-card{width:min(720px,100%)}.players-header{display:flex;justify-content:space-between;margin:20px 0 10px}
+.player-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;max-height:420px;overflow:auto}
+.player{padding:11px 13px;background:#ffffff08;border-radius:12px;display:flex;gap:10px;align-items:center}
+.player .crown{margin-left:auto}.muted{color:var(--muted);font-size:14px}
+.battlefield{width:100%;display:flex;align-items:center;justify-content:space-around;margin:4px 0 18px}
+.monster{text-align:center}.monster-face{font-size:70px;filter:drop-shadow(0 10px 18px #0008)}.monster-name{font-weight:900;letter-spacing:.12em;font-size:12px}
+.vs{font-weight:1000;font-size:30px;color:var(--accent)}
+.question-card{text-align:center;width:100%}.question{font-size:clamp(34px,8vw,64px);font-weight:1000;margin:8px 0 4px}
+.timer{font-size:15px;color:var(--accent);min-height:22px}.answers{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+.answer{background:#263456;color:var(--text);font-size:20px}.answer.correct{background:#2f7d4b}.answer.wrong{background:#8c3d49}.answer.selected{outline:3px solid var(--accent)}
+.game-message{min-height:24px;margin-top:14px;color:var(--muted)}
+.feed-card{width:100%;margin-top:14px}.feed{max-height:150px;overflow:auto;display:flex;flex-direction:column;gap:6px}
+.feed-item{font-size:13px;padding:8px 10px;background:#ffffff08;border-radius:9px}.feed-item strong{color:var(--accent)}
+.round-pill{padding:8px 12px;border-radius:999px;background:#ffffff0b;color:var(--accent);font-weight:800;font-size:13px}
+.leaderboard{display:flex;flex-direction:column;gap:8px;margin-top:18px}.rank{display:grid;grid-template-columns:46px 1fr auto;align-items:center;gap:12px;padding:13px;border-radius:14px;background:#ffffff08}
+.rank.first{background:#ffd16618}.rank-num{font-size:20px;font-weight:900}.rank-name{font-weight:800}.rank-meta{font-size:12px;color:var(--muted)}.score{font-weight:1000;color:var(--accent)}
+@media(max-width:600px){.app{padding:14px}.actions,.answers,.player-list{grid-template-columns:1fr}.screen{min-height:calc(100vh - 28px)}.card{padding:18px}.monster-face{font-size:52px}}

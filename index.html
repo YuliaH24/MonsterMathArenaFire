@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monster Math Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="homeScreen" class="screen active">
+      <div class="hero">
+        <div class="badge">⚔️ FIREBASE MULTIPLAYER</div>
+        <h1>Monster Math Arena</h1>
+        <p class="subtitle">10 soal matematika • 10 poin per soal • jawaban benar tercepat menang</p>
+
+        <div class="card">
+          <label for="nameInput">Nama pemain</label>
+          <input id="nameInput" maxlength="24" placeholder="Masukkan nama..." autocomplete="off">
+
+          <div class="actions">
+            <button id="createBtn" class="primary">🏰 Buat Arena</button>
+            <button id="joinBtn" class="secondary">🚪 Masuk Arena</button>
+          </div>
+
+          <div id="joinBox" class="join-box hidden">
+            <label for="roomInput">Kode arena</label>
+            <input id="roomInput" maxlength="6" placeholder="ABC123" autocomplete="off">
+          </div>
+        </div>
+
+        <div id="homeError" class="error"></div>
+      </div>
+    </section>
+
+    <section id="lobbyScreen" class="screen">
+      <div class="topbar">
+        <div>
+          <div class="small-label">KODE ARENA</div>
+          <div id="roomCode" class="room-code">------</div>
+        </div>
+        <button id="leaveLobbyBtn" class="danger">Keluar</button>
+      </div>
+
+      <div class="card lobby-card">
+        <h2>🏟️ Lobby Monster</h2>
+        <p id="hostHint">Bagikan kode arena kepada peserta.</p>
+        <div class="players-header">
+          <span>Peserta</span>
+          <strong id="playerCount">0/30</strong>
+        </div>
+        <div id="playerList" class="player-list"></div>
+        <button id="startBtn" class="primary wide hidden">⚔️ Mulai Pertandingan</button>
+        <div id="lobbyStatus" class="muted"></div>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <div class="topbar">
+        <div>
+          <div class="small-label">ARENA</div>
+          <strong id="gameRoomCode">------</strong>
+        </div>
+        <div class="round-pill">SOAL <span id="roundLabel">1/10</span></div>
+      </div>
+
+      <div class="battlefield">
+        <div class="monster monster-left"><div class="monster-face">👹</div><div class="monster-name">KRON</div></div>
+        <div class="vs">VS</div>
+        <div class="monster monster-right"><div class="monster-face">👾</div><div class="monster-name">ZARA</div></div>
+      </div>
+
+      <div class="card question-card">
+        <div id="questionText" class="question">Menunggu soal...</div>
+        <div id="timer" class="timer">--</div>
+        <div id="answers" class="answers"></div>
+        <div id="gameMessage" class="game-message"></div>
+      </div>
+
+      <div class="card feed-card">
+        <h3>⚡ Arena Feed</h3>
+        <div id="feed" class="feed"></div>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="hero">
+        <div class="badge">🏆 PERTANDINGAN SELESAI</div>
+        <h1>Hasil Arena</h1>
+        <div class="card">
+          <div id="resultRoom" class="muted"></div>
+          <div id="leaderboard" class="leaderboard"></div>
+          <button id="playAgainBtn" class="primary wide">🏰 Kembali ke Beranda</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Firebase v10 compat: simple for a three-file GitHub Pages project -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
