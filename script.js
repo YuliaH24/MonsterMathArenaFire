@@ -7,7 +7,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyCfzAaIdXgYv4Wl9Z5F-oVEk0pdRdqHgPk",
   authDomain: "monster-math-arena.firebaseapp.com",
-  databaseURL: "https://monster-math-arena.web.app//",
+  databaseURL: "https://monster-math-arena-default-rtdb.asia-southeast1.firebasedatabase.app/",
   projectId: "monster-math-arena",
   storageBucket: "monster-math-arena.firebasestorage.app",
   messagingSenderId: "375468706758",
