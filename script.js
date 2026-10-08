@@ -17,7 +17,7 @@ const firebaseConfig = {
 const MAX_PLAYERS = 30;
 const TOTAL_QUESTIONS = 10;
 const POINTS = 10;
-const QUESTION_SECONDS = 12;
+const QUESTION_SECONDS = 30;
 
 const $ = (id) => document.getElementById(id);
 const screens = ["homeScreen","lobbyScreen","gameScreen","resultScreen"];
